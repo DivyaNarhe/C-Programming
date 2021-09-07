@@ -1,38 +1,22 @@
-//Accept number from user and check wheather number is divisible by 5 or not.
 
-#include<stdio.h> 
-typedef int BOOL; 
-
-#define TRUE 1 
-#define FALSE 0 
-BOOL Check( int iNo) 
-{ if(iNo<0)
-{
-    iNo= -iNo;
-}
- if(( iNo % 5) == 0) 
+#include<stdio.h>
+void Display( int iNo, int iFrequency) 
+{ 
+ int iCnt = 0;
+ 
+ for(iCnt=0; iCnt<iFrequency;iCnt++) 
  { 
- return TRUE; 
+ printf("%d\t",iNo); 
  } 
- else 
- { 
- return FALSE ; 
- } 
-}
+} 
 int main() 
 { 
  int iValue = 0; 
- BOOL bRet = FALSE; 
- printf("Enter number: "); 
- scanf("%d",&iValue); 
- bRet = Check(iValue); 
- if(bRet == TRUE) 
- { 
- printf("Divisible by 5"); 
- } 
- else 
- { 
- printf("Not divisible by 5"); 
- } 
+ int iCount = 0; 
+ printf("Enter number:"); 
+ scanf("%d" ,&iValue); 
+ printf("Enter Frequency :"); 
+ scanf("%d" ,&iCount); 
+ Display(iValue,iCount); 
  return 0; 
 }

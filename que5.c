@@ -1,18 +1,34 @@
-// Accept number from user and Display * on screen 
 #include<stdio.h> 
-void Accept(int iNo) 
+#define TRUE 1 
+#define FALSE 0 
+typedef int BOOL; 
+ 
+BOOL ChkEven(int iNo) 
 { 
- int iCnt = 0; 
- for( iCnt=1 ; iCnt<=iNo ; iCnt++ ) 
- { 
- printf(" * \n"); 
+    if (iNo<0){
+        iNo = -iNo;
+    }
+ if((iNo%2)==0)
+ {
+     return TRUE;
  } 
+ else{
+     return FALSE;
+ }
 } 
 int main() 
 { 
  int iValue = 0; 
- printf("Enter number :");
- scanf("%d",&iValue);
- Accept(iValue); 
+ BOOL bRet = FALSE; 
+ printf("Enter number:"); 
+ scanf("%d" ,&iValue); 
+ bRet = ChkEven(iValue); 
+ if (bRet==TRUE)
+ {
+     printf("Even Number\n");
+ } 
+ else{
+     printf("Odd Number\n");
+ }
  return 0; 
 }

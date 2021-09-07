@@ -1,16 +1,19 @@
-// Print 'jay Ganesh' 5 times on screen
-#include<stdio.h> 
-void Display() 
+/*Accept number from user and 
+display '*' on screen using while loop */
+#include<stdio.h>
+void Display(int iNo) 
 { 
- int i = 0; 
- for(i = 1; i<=5 ;i++) 
+ while( iNo>=1 ) 
  { 
- printf("Jay Ganesh\n"); 
+ printf(" * \n"); 
+ iNo --;
  } 
-}
+} 
 int main() 
-{ 
- 
- Display(); 
+{
+    int iValue = 0; 
+ printf("Enter number :"); 
+ scanf("%d" ,&iValue); 
+ Display(iValue); 
  return 0; 
 }

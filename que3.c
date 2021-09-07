@@ -1,16 +1,21 @@
-//Print 5 to 1 number on screen using for loop 
-#include<stdio.h> 
-int Display() 
+#include<stdio.h>
+
+void Display ( int iNo) 
 { 
- int i =5; 
- for( i=5;i>=1 ;i--) 
+ if(iNo < 10) 
  { 
- printf("%d\n",i);  
+ printf("Hello"); 
+ } 
+ else 
+ { 
+ printf("Demo"); 
  } 
 } 
 int main() 
 { 
- Display(); 
- 
- return 0; 
+ int iValue = 0; 
+ printf("Enter number:"); 
+ scanf("%d" ,&iValue); 
+ Display(iValue); 
+  return 0;
 }
